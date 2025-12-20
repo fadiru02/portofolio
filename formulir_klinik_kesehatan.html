@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Pendaftaran Pasien Baru</title>
+</head>
+<body>
+    
+    <h2>Formulir Pendaftaran Pasien Baru</h2>
+    <p>Klinik Kesehatan Sehat Selalu</p>
+    
+    <hr>
+    
+    <form action="proses_daftar_pasien.php" method="post">
+        
+        <fieldset>
+            <legend>Data Pasien</legend>
+
+            <div>
+                <label for="nama-pasien">Nama Lengkap Pasien:</label><br>
+                <input type="text" id="nama-pasien" name="nama_pasien" required>
+            </div>
+            <br>
+            <div>
+                <label for="tgl-lahir">Tanggal Lahir:</label><br>
+                <input type="date" id="tgl-lahir" name="tgl_lahir" required>
+            </div>
+            <br>
+            <div>
+                <p>Jenis Kelamin:</p>
+                <input type="radio" id="jk-pria" name="jenis_kelamin" value="pria" required>
+                <label for="jk-pria">Pria</label>
+                &nbsp;&nbsp; <input type="radio" id="jk-wanita" name="jenis_kelamin" value="wanita">
+                <label for="jk-wanita">Wanita</label>
+            </div>
+            <br>
+            <div>
+                <label for="telepon">No. Telepon/HP Aktif:</label><br>
+                <input type="tel" id="telepon" name="telepon" placeholder="08...">
+            </div>
+        </fieldset>
+        <br>
+
+        <fieldset>
+            <legend>Informasi Medis & Kunjungan</legend>
+
+            <div>
+                <label for="poli-tujuan">Poliklinik Tujuan:</label><br>
+                <select id="poli-tujuan" name="poli_tujuan" required>
+                    <option value="" selected disabled>-- Pilih Poliklinik --</option>
+                    <option value="umum">Poli Umum</option>
+                    <option value="gigi">Poli Gigi</option>
+                    <option value="anak">Poli Anak</option>
+                    <option value="tht">Poli THT</option>
+                    <option value="kulit">Poli Kulit & Kelamin</option>
+                </select>
+            </div>
+            <br>
+            <div>
+                <label for="asuransi">Jenis Asuransi/Jaminan:</label><br>
+                <input type="text" id="asuransi" name="asuransi" value="BPJS" placeholder="BPJS / Nama Asuransi / Umum">
+            </div>
+            <br>
+            <div>
+                <label for="riwayat-alergi">Riwayat Alergi (Obat atau Makanan):</label><br>
+                <textarea id="riwayat-alergi" name="riwayat_alergi" rows="4" cols="50" placeholder="Tuliskan jika ada, atau isi '-' jika tidak ada alergi."></textarea>
+            </div>
+        </fieldset>
+        <br>
+
+        <div>
+            <input type="submit" value="Registrasi Pasien">
+        </div>
+    </form>
+    
+</body>
+</html>

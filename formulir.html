@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar Membuat Form</title>
+</head>
+
+<body>
+
+    <h2>Formulir Pendaftaran Sederhana</h2>
+
+    <form action="formulir.html" method="get">
+        
+        <div>
+            <label for="nama">Nama :</label><br>
+            <input type="text" id="nama" name="nama" placeholder="Ketik nama Anda">
+        </div>
+        <br>
+        <div>
+            <label for="password">Password :</label><br>
+            <input type="password" id="password" name="password" placeholder="Ketik password rahasia">
+        </div>
+        <br>
+
+        <fieldset>
+            <legend>Jenis Kelamin :</legend>
+            <div>
+                <input type="radio" id="laki-laki" name="jenis-kelamin" value="Laki-Laki" checked>
+                <label for="laki-laki">Laki-Laki</label>
+            </div>
+            <div>
+                <input type="radio" id="perempuan" name="jenis-kelamin" value="Perempuan">
+                <label for="perempuan">Perempuan</label>
+            </div>
+        </fieldset>
+        <br>
+
+        <fieldset>
+            <legend>Hobi :</legend>
+            <div>
+                <input type="checkbox" id="hobi-baca" name="hobi[]" value="membaca">
+                <label for="hobi-baca">Membaca Buku</label>
+            </div>
+            <div>
+                <input type="checkbox" id="hobi-menulis" name="hobi[]" value="menulis">
+                <label for="hobi-menulis">Menulis</label>
+            </div>
+            <div>
+                <input type="checkbox" id="hobi-mancing" name="hobi[]" value="mancing">
+                <label for="hobi-mancing">Mancing</label>
+            </div>
+        </fieldset>
+        <br>
+
+        <div>
+            <label for="asal-kota">Asal Kota :</label><br>
+            <select id="asal-kota" name="asal-kota">
+                <option value="" selected disabled>-- Pilih Kota --</option>
+                <option value="Kota-Jakarta">Kota Jakarta</option>
+                <option value="Kota-Bandung">Kota Bandung</option>
+                <option value="Kota-Madiun">Kota Madiun</option>
+            </select>
+        </div>
+        <br>
+
+        <div>
+            <label for="komentar">Komentar Anda :</label><br>
+            <textarea id="komentar" name="Komentar" rows="5" cols="30"
+                placeholder="Tidak perlu kata kata, mending tidur..."></textarea>
+        </div>
+        <br>
+
+        <div>
+            <input type="submit" value="Mulai Proses!">
+        </div>
+
+    </form>
+
+</body>
+
+</html>
