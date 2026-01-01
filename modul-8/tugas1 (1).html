@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas 1: Konverter Nilai</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; }
+        input { font-size: 1em; padding: 5px; }
+        button { font-size: 1em; padding: 5px 10px; margin-left: 5px; }
+        #hasilHuruf { font-size: 1.5em; font-weight: bold; margin-top: 15px; }
+    </style>
+</head>
+<body>
+
+    <h2>Tugas 1: Konverter Nilai Angka ke Huruf</h2>
+    
+    <label for="nilaiAngka">Masukkan Nilai Angka (0-100):</label>
+    <input type="number" id="nilaiAngka" min="0" max="100">
+    
+    <button onclick="konversiNilai()">Konversi</button>
+    
+    <p id="hasilHuruf"></p>
+
+    <script>
+        function konversiNilai() {
+            let angka = parseInt(document.getElementById("nilaiAngka").value);
+
+            let huruf;
+            if (angka >= 0 && angka <= 40) {
+                huruf = "E";
+            } else if (angka >= 41 && angka <= 55) {
+                huruf = "D";
+            } else if (angka >= 56 && angka <= 60) {
+                huruf = "C";
+            } else if (angka >= 61 && angka <= 65) {
+                huruf = "BC";
+            } else if (angka >= 66 && angka <= 70) {
+                huruf = "B";
+            } else if (angka >= 71 && angka <= 80) {
+                huruf = "AB";
+            } else if (angka >= 81 && angka <= 100) {
+                huruf = "A";
+            } else {
+                huruf = "Nilai tidak valid";
+            }
+            document.getElementById("hasilHuruf").innerText = "Nilai Huruf: " + huruf;
+        }
+    </script>
+
+</body>
+</html>
