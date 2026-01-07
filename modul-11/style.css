@@ -1,0 +1,22 @@
+body{
+    font-family: 'Times New Roman', Times, serif;
+}
+.judul{
+    background: #87D1d8;
+    padding: 18px;
+    text-align: center;
+}
+.judul h1, h2, h3{
+    height: 14px;
+}
+
+a{
+    padding: 5px;
+}
+.table{
+    border-collapse: collapse;
+
+}
+table.table th th, table table tr td{
+    padding: 10px 20px;
+}
